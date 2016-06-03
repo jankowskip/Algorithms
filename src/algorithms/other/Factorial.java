@@ -4,7 +4,7 @@ public class Factorial {
 
 	public int factorialRecursion(int a) {
 		int result = 0;
-		if (a == 1) {
+		if (a < 2) {
 			return 1;
 		}
 		result = factorialRecursion(a - 1) * a;
