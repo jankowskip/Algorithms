@@ -14,8 +14,8 @@ public class Start {
 		System.out.println(sac.checkString("ANakondA", 'A'));
 		Factorial fac = new Factorial();
 		System.out.println("----------Factorial Algorithm----------");
-		System.out.println(fac.factorialIteration(0));
-		System.out.println(fac.factorialRecursion(0));
+		System.out.println(fac.factorialIteration(3));
+		System.out.println(fac.factorialRecursion(3));
 		Fibonacci f = new Fibonacci();
 		System.out.println("----------Fibonacci Algorithm----------");
 		System.out.println(f.fibonacciIteration(19));
