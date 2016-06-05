@@ -22,6 +22,6 @@ Task: https://codility.com/programmers/task/tape_equilibrium/
 ##### PermMissingElem
 Task: https://codility.com/programmers/task/perm_missing_elem/
 ## algorithms.sort
-####BubbleSort
-####InsertionSort
-####SelectionSort
+#####BubbleSort
+#####InsertionSort
+#####SelectionSort
