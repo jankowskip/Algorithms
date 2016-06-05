@@ -2,10 +2,15 @@ import algorithms.other.Factorial;
 import algorithms.other.Fibonacci;
 import algorithms.other.FuzzBuzz;
 import algorithms.other.StringAndChar;
+import algorithms.sort.BubbleSort;
+import algorithms.sort.InsertionSort;
+import algorithms.sort.SelectionSort;
 
 public class Start {
 
 	public static void main(String[] args) {
+		
+		int[] list = {2,5,4,3,3,1};
 		FuzzBuzz fuzz = new FuzzBuzz();
 		System.out.println("----------FuzzBuzz Algorithm----------");
 		fuzz.algorithm();
@@ -21,6 +26,14 @@ public class Start {
 		System.out.println(f.fibonacciIteration(19));
 		System.out.println(f.fibonacciRecursion(19));
 		f.createFibonacciList(19);
+//		BubbleSort bubbleSort = new BubbleSort();
+//		System.out.println("----------BubbleSort Algorithm----------");
+//		bubbleSort.sort(list);
+//		InsertionSort sort2 = new InsertionSort();
+//		sort2.sort(list);
+//		SelectionSort sort3 = new SelectionSort();
+//		sort3.sort(list);
+
 	}
 
 }

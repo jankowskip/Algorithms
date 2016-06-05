@@ -21,3 +21,7 @@ Task: https://codility.com/programmers/task/frog_jmp/
 Task: https://codility.com/programmers/task/tape_equilibrium/
 ##### PermMissingElem
 Task: https://codility.com/programmers/task/perm_missing_elem/
+## algorithms.sort
+####BubbleSort
+####InsertionSort
+####SelectionSort
