@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import algorithms.other.Factorial;
 import algorithms.other.Fibonacci;
 import algorithms.other.FuzzBuzz;
@@ -5,12 +9,14 @@ import algorithms.other.StringAndChar;
 import algorithms.sort.BubbleSort;
 import algorithms.sort.InsertionSort;
 import algorithms.sort.SelectionSort;
+import algorithms.sort.ShellSort;
+import algorithms.sort.Sort;
+import algorithms.sort.SortTester;
 
 public class Start {
 
 	public static void main(String[] args) {
-		
-		int[] list = {2,5,4,3,3,1};
+		// Other
 		FuzzBuzz fuzz = new FuzzBuzz();
 		System.out.println("----------FuzzBuzz Algorithm----------");
 		fuzz.algorithm();
@@ -19,20 +25,24 @@ public class Start {
 		System.out.println(sac.checkString("ANakondA", 'A'));
 		Factorial fac = new Factorial();
 		System.out.println("----------Factorial Algorithm----------");
-		System.out.println(fac.factorialIteration(3));
-		System.out.println(fac.factorialRecursion(3));
+		System.out.println("Iteration: " + fac.factorialIteration(3));
+		System.out.println("Recursion: " + fac.factorialRecursion(3));
 		Fibonacci f = new Fibonacci();
 		System.out.println("----------Fibonacci Algorithm----------");
-		System.out.println(f.fibonacciIteration(19));
-		System.out.println(f.fibonacciRecursion(19));
-		f.createFibonacciList(19);
-//		BubbleSort bubbleSort = new BubbleSort();
-//		System.out.println("----------BubbleSort Algorithm----------");
-//		bubbleSort.sort(list);
-//		InsertionSort sort2 = new InsertionSort();
-//		sort2.sort(list);
-//		SelectionSort sort3 = new SelectionSort();
-//		sort3.sort(list);
+		System.out.println("Iteration: " + f.fibonacciIteration(5));
+		System.out.println("Recursion: " + f.fibonacciRecursion(4));
+		f.createFibonacciList(5);
+
+		// Sorting
+		System.out.println("----------Sorting----------");
+		Sort bubbleSort = new BubbleSort();
+		Sort insertionSort = new InsertionSort();
+		Sort selectionSort = new SelectionSort();
+		Sort shellSort = new ShellSort();
+		List<Sort> list = new ArrayList<Sort>();
+		list.addAll(Arrays.asList(bubbleSort, insertionSort, selectionSort, shellSort));
+		SortTester sortTester = new SortTester();
+		sortTester.executeSortAndPrint(list, 100);
 
 	}
 

@@ -25,3 +25,4 @@ Task: https://codility.com/programmers/task/perm_missing_elem/
 #####BubbleSort
 #####InsertionSort
 #####SelectionSort
+#####ShellSort

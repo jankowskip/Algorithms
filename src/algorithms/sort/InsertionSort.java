@@ -1,6 +1,6 @@
 package algorithms.sort;
 
-public class InsertionSort implements Sort{
+public class InsertionSort implements Sort {
 
 	public int[] sort(int[] array) {
 		int temp = 0;
@@ -18,5 +18,9 @@ public class InsertionSort implements Sort{
 
 		return array;
 
+	}
+
+	public String toString() {
+		return "InsertionSort";
 	}
 }

@@ -13,19 +13,18 @@ public class BubbleSort implements Sort {
 					array[j - 1] = array[j];
 					array[j] = temp;
 					swapped = true;
-
 				}
 			}
-			if (swapped = false) {
+			if (swapped == false) {
 				break;
 			}
-
 		}
 		return array;
+	}
+
+	public String toString() {
+		return "BubbleSort";
 
 	}
 
-
-	}
-
-
+}
