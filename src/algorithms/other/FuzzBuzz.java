@@ -4,7 +4,7 @@ public class FuzzBuzz {
 
 	public void algorithm() {
 		for (int i = 1; i <= 100; i++) {
-			if (i % 3 == 0 && i%5 ==0 ) {
+			if (i % 3 == 0 && i%5 ==0 ) { //%15
 				System.out.println("FuzzBuzz");
 			}
 			 if (i % 3 == 0) {
@@ -22,5 +22,3 @@ public class FuzzBuzz {
 	}
 
 }
-//oddity: "%" it's not a modulo operator it's a remainder operator
-// differences between modulo and remainder: https://blogs.msdn.microsoft.com/ericlippert/2011/12/05/whats-the-difference-remainder-vs-modulus/

@@ -2,7 +2,7 @@ package algorithms.sort;
 
 public class SelectionSort implements Sort {
 
-	public int[] sort(int[] array) {
+	public void sort(int[] array) {
 		int minValue;
 		int index;
 		for (int i = 0; i < array.length; i++) {
@@ -17,7 +17,6 @@ public class SelectionSort implements Sort {
 			array[index] = array[i];
 			array[i] = minValue;
 		}
-		return array;
 	}
 
 	public String toString() {

@@ -12,9 +12,8 @@ public class Fibonacci {
 		} else if (a == 1) {
 			return 1;
 		}
-
-		int result = fibonacciRecursion(a - 2) + fibonacciRecursion(a - 1);
-		return result;
+		return  fibonacciRecursion(a - 2) + fibonacciRecursion(a - 1);
+		
 	}
 
 	public int fibonacciIteration(int a) {

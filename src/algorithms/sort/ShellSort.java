@@ -2,7 +2,7 @@ package algorithms.sort;
 
 public class ShellSort implements Sort {
 
-	public int[] sort(int[] array) {
+	public void sort(int[] array) {
 		int temp = 0;
 		for (int gap = array.length / 2; gap > 0; gap = gap / 2) {
 			for (int i = gap; i < array.length; i++) {
@@ -14,7 +14,6 @@ public class ShellSort implements Sort {
 				}
 			}
 		}
-		return array;
 	}
 
 	public String toString() {

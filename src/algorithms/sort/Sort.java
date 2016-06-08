@@ -1,5 +1,5 @@
 package algorithms.sort;
 
 public interface Sort {
-	public int[] sort(int[] array);
+	public void sort(int[] array);
 }

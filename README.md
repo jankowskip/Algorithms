@@ -26,3 +26,5 @@ Task: https://codility.com/programmers/task/perm_missing_elem/
 #####InsertionSort
 #####SelectionSort
 #####ShellSort
+#####MergeSort
+#####QuickSort

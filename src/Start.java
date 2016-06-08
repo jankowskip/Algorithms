@@ -1,13 +1,13 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
 import algorithms.other.Factorial;
 import algorithms.other.Fibonacci;
 import algorithms.other.FuzzBuzz;
 import algorithms.other.StringAndChar;
 import algorithms.sort.BubbleSort;
 import algorithms.sort.InsertionSort;
+import algorithms.sort.MergeSort;
 import algorithms.sort.SelectionSort;
 import algorithms.sort.ShellSort;
 import algorithms.sort.Sort;
@@ -39,11 +39,11 @@ public class Start {
 		Sort insertionSort = new InsertionSort();
 		Sort selectionSort = new SelectionSort();
 		Sort shellSort = new ShellSort();
+		Sort mergeSort = new MergeSort();
 		List<Sort> list = new ArrayList<Sort>();
-		list.addAll(Arrays.asList(bubbleSort, insertionSort, selectionSort, shellSort));
+		list.addAll(Arrays.asList(bubbleSort, insertionSort, selectionSort, shellSort, mergeSort));
 		SortTester sortTester = new SortTester();
 		sortTester.executeSortAndPrint(list, 100);
-
 	}
 
 }

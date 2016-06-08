@@ -15,4 +15,3 @@ public class StringAndChar {
 	}
 }
 
-// oddity: in matlab 'char' is charachter array

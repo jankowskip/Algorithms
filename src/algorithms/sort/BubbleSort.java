@@ -2,7 +2,7 @@ package algorithms.sort;
 
 public class BubbleSort implements Sort {
 
-	public int[] sort(int[] array) {
+	public void sort(int[] array) {
 		int temp = 0;
 		boolean swapped = false;
 		for (int i = 0; i < array.length; i++) {
@@ -19,7 +19,6 @@ public class BubbleSort implements Sort {
 				break;
 			}
 		}
-		return array;
 	}
 
 	public String toString() {

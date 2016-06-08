@@ -17,11 +17,11 @@ public class SortTester {
 			long endTime = System.nanoTime();
 			long time = endTime - startTime;
 			printList(arrayTester);
-			System.out.println('\n' + s.toString() + " needed " + time + " ns to sort list");
+			System.out.println('\n' + s.toString() + " needed " + String.format("%,d", time) + " ns to sort list");
 		}
 	}
 
-	private void printList(int[] array) {
+	public void printList(int[] array) {
 		for (int i = 0; i < array.length; i++) {
 			System.out.print("[" + array[i] + "] ");
 		}

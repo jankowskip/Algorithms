@@ -2,7 +2,7 @@ package algorithms.sort;
 
 public class InsertionSort implements Sort {
 
-	public int[] sort(int[] array) {
+	public void sort(int[] array) {
 		int temp = 0;
 		for (int i = 1; i < array.length; i++) {
 			for (int j = i - 1; j >= 0; j--) {
@@ -15,9 +15,6 @@ public class InsertionSort implements Sort {
 				}
 			}
 		}
-
-		return array;
-
 	}
 
 	public String toString() {
