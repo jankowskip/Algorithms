@@ -1,13 +1,15 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import algorithms.other.Factorial;
-import algorithms.other.Fibonacci;
-import algorithms.other.FuzzBuzz;
-import algorithms.other.StringAndChar;
+
+import algorithms.basic.Factorial;
+import algorithms.basic.FuzzBuzz;
+import algorithms.basic.StringAndChar;
+import algorithms.codility.Fibonacci;
 import algorithms.sort.BubbleSort;
 import algorithms.sort.InsertionSort;
 import algorithms.sort.MergeSort;
+import algorithms.sort.QuickSort;
 import algorithms.sort.SelectionSort;
 import algorithms.sort.ShellSort;
 import algorithms.sort.Sort;
@@ -40,10 +42,16 @@ public class Start {
 		Sort selectionSort = new SelectionSort();
 		Sort shellSort = new ShellSort();
 		Sort mergeSort = new MergeSort();
+		Sort quickSort = new QuickSort();
 		List<Sort> list = new ArrayList<Sort>();
-		list.addAll(Arrays.asList(bubbleSort, insertionSort, selectionSort, shellSort, mergeSort));
+		list.addAll(Arrays.asList(bubbleSort, insertionSort, selectionSort, shellSort, mergeSort,quickSort));
 		SortTester sortTester = new SortTester();
 		sortTester.executeSortAndPrint(list, 100);
+		
+		int[] arr = {2,3,2,1};
+		quickSort.sort(arr);
+		System.out.println(Arrays.toString(arr));
+		
 	}
 
 }

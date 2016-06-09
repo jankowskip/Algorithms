@@ -1,4 +1,4 @@
-package algorithms.other;
+package algorithms.codility;
 
 import java.util.ArrayList;
 import java.util.List;

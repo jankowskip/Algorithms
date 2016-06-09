@@ -31,7 +31,7 @@ public class SortTester {
 		int[] randomArray = new int[size];
 		Random r = new Random();
 		for (int i = 0; i < size; i++) {
-			randomArray[i] = r.nextInt(9) + 1;
+			randomArray[i] = r.nextInt(99) + 1;
 		}
 		return randomArray;
 	}
