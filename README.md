@@ -1,5 +1,5 @@
 #Description of Algorithms tasks
-## algorithms.other
+## algorithms.basic
 ##### Factoral
 Task:  Create method that calculates the factorial of a number iteratively/recursion and return that value.
 ##### FuzzBuzz
@@ -28,3 +28,6 @@ Task: https://codility.com/programmers/task/perm_missing_elem/
 #####ShellSort
 #####MergeSort
 #####QuickSort
+##dataStructures
+#####DynamicArray 
+Array that resizes itself as needed.

@@ -14,11 +14,12 @@ import algorithms.sort.SelectionSort;
 import algorithms.sort.ShellSort;
 import algorithms.sort.Sort;
 import algorithms.sort.SortTester;
+import dataStructures.DynamicArray;
 
 public class Start {
 
 	public static void main(String[] args) {
-		// Other
+		// Basic
 		FuzzBuzz fuzz = new FuzzBuzz();
 		System.out.println("----------FuzzBuzz Algorithm----------");
 		fuzz.algorithm();
@@ -48,9 +49,23 @@ public class Start {
 		SortTester sortTester = new SortTester();
 		sortTester.executeSortAndPrint(list, 100);
 		
-		int[] arr = {2,3,2,1};
-		quickSort.sort(arr);
-		System.out.println(Arrays.toString(arr));
+		//Data Structure
+		DynamicArray da = new DynamicArray();
+		da.add(1);
+		System.out.println(da.size());
+		da.add(2);
+		System.out.println(da.size());
+		da.add(3);
+		System.out.println(da.size());
+		da.add(4);
+		System.out.println(da.size());
+		da.add(5);
+		System.out.println(da.size());
+		da.printArray();
+		System.out.println();
+		da.printRealArray();
+		
+		
 		
 	}
 
