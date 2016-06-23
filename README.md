@@ -29,5 +29,14 @@ Task: https://codility.com/programmers/task/perm_missing_elem/
 #####MergeSort
 #####QuickSort
 ##dataStructures
+#####ArrayQueue
+Implementation of Queue with array
 #####DynamicArray 
 Array that resizes itself as needed.
+#####DynamicArrayStack
+Implementation of Stack with DynamicArray
+#####LinkList
+Singly linked list
+#####LinkStack
+Implementation of Stack with LinkList
+
