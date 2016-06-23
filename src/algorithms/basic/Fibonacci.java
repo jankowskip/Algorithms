@@ -3,7 +3,7 @@ package algorithms.basic;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Fibonacci {
+public class Fibonacci { // // We return 0 for negative numbers and for numbers higher than Integer range.
 	List<Integer> fibList = new ArrayList<Integer>();
 
 	public Fibonacci(){
@@ -11,10 +11,11 @@ public class Fibonacci {
 		fibList.add(0);
 		fibList.add(1);
 	}
+
 	
 	
 	public int fibonacciRecursion(int index) {
-		if (index < 1) {
+		if (index < 1 || index >46) {
 			return 0;
 		} else if (index == 1) {
 			return 1;
@@ -24,7 +25,7 @@ public class Fibonacci {
 	}
 
 	public int fibonacciIteration(int index) {
-		if (index < 0) {
+		if (index < 0 || index >46) {
 			return 0;
 		} else if (index == 1) {
 			return 1;
@@ -43,7 +44,7 @@ public class Fibonacci {
 	}
 
 	public int dynamicFibonacci(int index) {
-		if(index<0){
+		if(index<0 || index >46){
 			return 0;
 		}
 		try{
