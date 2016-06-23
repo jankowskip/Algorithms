@@ -1,30 +1,39 @@
 package dataStructures;
 
-import java.util.Arrays;
-
 public class DynamicArray {
 	private int[] data;
-	private int size;
+	private int size = 0;
 
 	public DynamicArray() {
 		data = new int[1];
-		this.size = 0;
 	}
 
 	public DynamicArray(int size) {
 		data = new int[size];
-		this.size = 0;
 	}
 
-	public void add(int value) {
+	public void remove(int index) {
+		checkRange(index);
+		if (index == size - 1) {
+			data[index] = 0;
+		} else {
+			moveArray(index);
+		}
+		size--;
+	}
+	
+	public void trimToSize(){
+		changeArrayLength(size);
+	}
+
+	public boolean add(int value) {
 		if (data.length <= size) {
 			int newLength = size * 2;
-			int[] tempData = new int[newLength];
-			copyArrayValues(data, tempData);
-			data = tempData;
+			changeArrayLength(newLength);
 		}
 		data[size] = value;
 		size++;
+		return true;
 	}
 
 	public void add(int index, int value) {
@@ -32,38 +41,51 @@ public class DynamicArray {
 		data[index] = value;
 	}
 
-	private void copyArrayValues(int[] source, int[] target) {
-		for (int i = 0; i < source.length; i++) {
-			target[i] = source[i];
+	private void changeArrayLength(int newLength) {
+		int[] tempData = new int[newLength];
+		copyArrayValues(tempData);
+		data = tempData;
+	}
+
+	private void copyArrayValues(int[] target) {
+		for (int i = 0; i < size; i++) {
+			target[i] = data[i];
 		}
 	}
 
-	public void checkRange(int index){
-		if(index < size || index < 0){
+	private void moveArray(int index) {
+		for (int i = index + 1; i < size; i++) {
+			data[i - 1] = data[i];
+		}
+	}
+
+	private void checkRange(int index) {
+		if (index >= size || index < 0) {
 			throw new IndexOutOfBoundsException();
 		}
 	}
 	
-	
-	public void printArray(){
-		System.out.print('\n' + "[");
+	public String toString(){
+		StringBuilder sb = new StringBuilder();
+		sb.append("[");
 		for(int i=0; i<size;i++){
+			sb.append(data[i]);
 			if(i==size-1){
-				System.out.print(data[i] + "]");
-			} else {
-			System.out.print(data[i] + ", ");
+				sb.append("]");
+			}
+			else{
+				sb.append(", ");
 			}
 		}
-	}
-
-	public void printRealArray() {
-		System.out.println(Arrays.toString(data));
-	}
-
-	public int get(int index) {
-		return data[index];
+		return sb.toString();
 	}
 	
+
+	public int get(int index) {
+		checkRange(index);
+		return data[index];
+	}
+
 	public int size() {
 		return size;
 	}
