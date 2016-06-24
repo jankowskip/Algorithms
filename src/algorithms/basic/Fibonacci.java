@@ -3,31 +3,34 @@ package algorithms.basic;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Fibonacci { // // We return 0 for negative numbers and for numbers higher than Integer range.
+public class Fibonacci {
 	List<Integer> fibList = new ArrayList<Integer>();
 
-	public Fibonacci(){
+	public Fibonacci() {
 		fibList = new ArrayList<Integer>();
 		fibList.add(0);
 		fibList.add(1);
 	}
 
-	
-	
 	public int fibonacciRecursion(int index) {
-		if (index < 1 || index >46) {
-			return 0;
-		} else if (index == 1) {
+		checkArgumentRange(index);
+		if (index == 1) {
 			return 1;
 		}
-		return  fibonacciRecursion(index - 2) + fibonacciRecursion(index - 1);
-		
+		if (index == 0) {
+			return 0;
+		}
+
+		return fibonacciRecursion(index - 2) + fibonacciRecursion(index - 1);
+
 	}
 
 	public int fibonacciIteration(int index) {
-		if (index < 0 || index >46) {
+		checkArgumentRange(index);
+		if (index == 0) {
 			return 0;
-		} else if (index == 1) {
+		}
+		if (index == 1) {
 			return 1;
 		}
 		int firstNumber = 0;
@@ -44,12 +47,10 @@ public class Fibonacci { // // We return 0 for negative numbers and for numbers 
 	}
 
 	public int dynamicFibonacci(int index) {
-		if(index<0 || index >46){
-			return 0;
-		}
-		try{
+		checkArgumentRange(index);
+		try {
 			fibList.get(index);
-		} catch(Exception e){
+		} catch (Exception e) {
 			for (int i = fibList.size(); i <= index; i++) {
 				fibList.add(fibList.get(i - 2) + fibList.get(i - 1));
 			}
@@ -57,6 +58,10 @@ public class Fibonacci { // // We return 0 for negative numbers and for numbers 
 		return fibList.get(index);
 	}
 
-
+	private void checkArgumentRange(int index) {
+		if (index < 0 || index > 46) {
+			throw new IllegalArgumentException();
+		}
+	}
 
 }
