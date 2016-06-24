@@ -3,7 +3,7 @@ package algorithms.basic;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Factorial { // We return 0 for negative numbers and for numbers higher than Integer range.
+public class Factorial {
 	List<Integer> facList;
 
 	public Factorial() {
@@ -14,9 +14,7 @@ public class Factorial { // We return 0 for negative numbers and for numbers hig
 	}
 
 	public int factorialRecursion(int a) {
-		if (a > 12 || a<0) {
-			return 0;
-		}
+		checkArgumentRange(a);
 		if (a < 2) {
 			return 1;
 		}
@@ -25,14 +23,11 @@ public class Factorial { // We return 0 for negative numbers and for numbers hig
 	}
 
 	public int factorialIteration(int a) {
-		if (a > 12 || a<0) {
-	
-			return 0;
-		}
+		checkArgumentRange(a);
 		if (a < 2) {
 			return 1;
 		}
-	
+
 		int result = 1;
 		for (int i = a; i > 0; i--) {
 			result *= i;
@@ -41,9 +36,7 @@ public class Factorial { // We return 0 for negative numbers and for numbers hig
 	}
 
 	public int dynamicFactorial(int a) {
-		if (a > 12 || a<0) {
-			return 0;
-		}
+		checkArgumentRange(a);
 		if (a < 2) {
 			return 1;
 		}
@@ -56,6 +49,12 @@ public class Factorial { // We return 0 for negative numbers and for numbers hig
 		}
 		return facList.get(a);
 
+	}
+
+	private void checkArgumentRange(int a) {
+		if (a > 12 || a < 0) {
+			throw new IllegalArgumentException();
+		}
 	}
 
 }
