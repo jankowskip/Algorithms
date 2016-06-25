@@ -1,11 +1,11 @@
 package dataStructures;
 
 public class LinkStack {
-	private LinkList list;
+	private LinkList<Integer> list;
 	private int topIndex = -1;
 
 	public LinkStack() {
-		list = new LinkList();
+		list = new LinkList<Integer>();
 	}
 	
 	public void push(int value){
