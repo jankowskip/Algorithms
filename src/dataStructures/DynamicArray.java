@@ -25,9 +25,8 @@ public class DynamicArray {
 		return true;
 	}
 	
-	public boolean trimToSize(){
+	public void trimToSize(){
 		changeArrayLength(size);
-		return true;
 	}
 
 	public boolean add(int value) {
@@ -42,7 +41,7 @@ public class DynamicArray {
 
 	public boolean add(int index, int value) {
 		if (index >= size || index < 0) {
-			return true;
+			return false;
 		}
 		data[index] = value;
 		return true;
