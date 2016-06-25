@@ -1,54 +1,62 @@
 package dataStructures;
 
-public class LinkList {
-	private Node head;
+public class LinkList<E> {
+	private Node<E> head;
 	private int size = 0;
 
 	public LinkList() {
-		head = new Node(null);
+		head = new Node<E>(null);
 	}
 
-	public void add(Object o) {
-		Node node = new Node(o);
-		Node current = head;
+	public boolean add(E e) {
+		Node<E> node = new Node<E>(e);
+		Node<E> current = head;
 		while (current.getNext() != null) {
 			current = current.getNext();
 		}
 		current.setNext(node);
 		size++;
+		return true;
+	
 	}
 
-	public void add(Object o, int index) {
-		checkRange(index);
-		Node node = new Node(o);
-		Node current = head;
+	public boolean add(E e, int index) {
+		if (index >= size || index < 0) {
+			return false;
+		}
+		Node<E> node = new Node<E>(e);
+		Node<E> current = head;
 		for (int i = 0; i < index; i++) {
 			current = current.getNext();
 		}
-		Node temp = current.getNext();
+		Node<E> temp = current.getNext();
 		current.setNext(node);
 		node.setNext(temp);
 		size++;
+		return true;
 	}
 
-	public void remove(int index) {
-		checkRange(index);
-		Node current = head;
+	public boolean remove(int index) {
+		if (index >= size || index < 0) {
+			return false;
+		}
+		Node<E> current = head;
 		for (int i = 0; i < index; i++) {
 			current = current.getNext();
 		}
 		current.setNext(current.getNext().getNext());
 
 		size--;
+		return true;
 	}
 
 	public int size() {
 		return size;
 	}
 	
-	public Object get(int index){
+	public E get(int index){
 		checkRange(index);
-		Node current = head;
+		Node<E> current = head;
 		for (int i = 0; i <= index; i++) {
 			current = current.getNext();
 		}
@@ -57,7 +65,7 @@ public class LinkList {
 
 
 	public String toString() {
-		Node current = head;
+		Node<E> current = head;
 		StringBuilder sb = new StringBuilder();
 		sb.append("[");
 		for (int i = 0; i < size; i++) {
@@ -78,24 +86,25 @@ public class LinkList {
 		}
 	}
 
-	private class Node {
-		Node next;
-		Object data;
 
-		public Node(Object data) {
+	private class Node<E> {
+		Node<E> next;
+		E data;
+
+		public Node(E e) {
 			next = null;
-			this.data = data;
+			this.data = e;
 		}
 
-		public Object getData() {
+		public E getData() {
 			return data;
 		}
 
-		public Node getNext() {
+		public Node<E> getNext() {
 			return next;
 		}
 
-		public void setNext(Node next) {
+		public void setNext(Node<E> next) {
 			this.next = next;
 		}
 	}
