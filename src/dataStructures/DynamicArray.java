@@ -12,18 +12,22 @@ public class DynamicArray {
 		data = new int[size];
 	}
 
-	public void remove(int index) {
-		checkRange(index);
+	public boolean remove(int index) {
+		if (index >= size || index < 0) {
+			return false;
+		}
 		if (index == size - 1) {
 			data[index] = 0;
 		} else {
 			moveArray(index);
 		}
 		size--;
+		return true;
 	}
 	
-	public void trimToSize(){
+	public boolean trimToSize(){
 		changeArrayLength(size);
+		return true;
 	}
 
 	public boolean add(int value) {
@@ -36,15 +40,17 @@ public class DynamicArray {
 		return true;
 	}
 
-	public void add(int index, int value) {
+	public boolean add(int index, int value) {
 		checkRange(index);
 		data[index] = value;
+		return true;
 	}
 
-	private void changeArrayLength(int newLength) {
+	private boolean changeArrayLength(int newLength) {
 		int[] tempData = new int[newLength];
 		copyArrayValues(tempData);
 		data = tempData;
+		return true;
 	}
 
 	private void copyArrayValues(int[] target) {

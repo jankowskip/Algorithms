@@ -13,9 +13,10 @@ public class DynamicArrayStack {
 	}
 	
 	
-	public void push(int value){
+	public boolean push(int value){
 		array.add(value);
 		topIndex++;
+		return true;
 	}
 	
 	public int pop(){

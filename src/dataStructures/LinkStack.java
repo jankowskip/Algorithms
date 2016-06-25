@@ -8,13 +8,14 @@ public class LinkStack {
 		list = new LinkList<Integer>();
 	}
 	
-	public void push(int value){
+	public boolean push(int value){
 		list.add(value);
 		topIndex++;
+		return true;
 	}
 	
-	public Object pop(){
-		Object result = list.get(topIndex);
+	public Integer pop(){
+		Integer result = list.get(topIndex);
 		list.remove(topIndex);
 		topIndex--;
 		return result;
