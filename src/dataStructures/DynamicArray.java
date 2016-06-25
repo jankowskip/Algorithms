@@ -41,7 +41,9 @@ public class DynamicArray {
 	}
 
 	public boolean add(int index, int value) {
-		checkRange(index);
+		if (index >= size || index < 0) {
+			return true;
+		}
 		data[index] = value;
 		return true;
 	}
