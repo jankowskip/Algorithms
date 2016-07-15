@@ -42,7 +42,7 @@ public class Factorial {
 		}
 		try {
 			facList.get(a);
-		} catch (Exception e) {
+		} catch (IndexOutOfBoundsException e) {
 			for (int i = facList.size(); i <= a; i++) {
 				facList.add(facList.get(i - 1) * i);
 			}
@@ -50,7 +50,7 @@ public class Factorial {
 		return facList.get(a);
 
 	}
-
+	
 	private void checkArgumentRange(int a) {
 		if (a > 12 || a < 0) {
 			throw new IllegalArgumentException();

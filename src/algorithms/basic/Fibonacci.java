@@ -50,7 +50,7 @@ public class Fibonacci {
 		checkArgumentRange(index);
 		try {
 			fibList.get(index);
-		} catch (Exception e) {
+		} catch (IndexOutOfBoundsException e) {
 			for (int i = fibList.size(); i <= index; i++) {
 				fibList.add(fibList.get(i - 2) + fibList.get(i - 1));
 			}
