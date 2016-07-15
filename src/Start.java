@@ -28,6 +28,7 @@ public class Start {
 		sortList.addAll(Arrays.asList(bubbleSort, insertionSort, selectionSort, shellSort, mergeSort, quickSort));
 		SortTester sortTester = new SortTester();
 		sortTester.executeSortAndPrint(sortList, 60);
+		
 
 	}
 
