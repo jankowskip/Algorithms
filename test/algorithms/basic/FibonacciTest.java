@@ -28,20 +28,28 @@ public class FibonacciTest {
 	@Test
 	public void testDynamicFibonacci() {
 		Fibonacci f = new Fibonacci();
-		int result;
-		long startTime = System.nanoTime();
-		result = f.dynamicFibonacci(46);
-		long endTime = System.nanoTime();
-		long firstCalculationTime = endTime - startTime;
 		assertEquals("error in fibonacciRecursion for argument 46", 1836311903, f.dynamicFibonacci(46));
 		assertEquals("error in fibonacciRecursion for argument 0", 0, f.dynamicFibonacci(0));
-		startTime = System.nanoTime();
-		result = f.dynamicFibonacci(46);
-		endTime = System.nanoTime();
-		long secondCalculationTime = endTime - startTime;
-		if (firstCalculationTime <= secondCalculationTime) {
-			fail("dynamic optimization doesnt work");
+	}
+
+	@Test
+	public void testDynamicFibonacciTime() {
+		Fibonacci f = new Fibonacci();
+		long firstCalculationTime = dynamicFibonacciTime(f);
+		for(int i=0;i<11;i++){
+			long nextCalculationTime = dynamicFibonacciTime(f);
+			if (firstCalculationTime <= nextCalculationTime) {
+				fail("dynamic optimization doesnt work");
+			}
 		}
+	}
+
+	private long dynamicFibonacciTime(Fibonacci f) {
+		long startTime = System.nanoTime();
+		f.dynamicFibonacci(46);
+		long endTime = System.nanoTime();
+		long calculationTime = endTime - startTime;
+		return calculationTime;
 	}
 
 	@Test(expected = IllegalArgumentException.class)

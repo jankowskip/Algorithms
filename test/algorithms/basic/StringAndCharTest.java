@@ -5,10 +5,11 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class StringAndCharTest {
-	StringAndChar sac = new StringAndChar();
+	
 
 	@Test
 	public void testCheckString() {
+		StringAndChar sac = new StringAndChar();
 		assertEquals("error in upercase String and lowercase char", 3, sac.checkString("ANAKONDA", 'a'));
 		assertEquals("error in upercase String and upercase char", 3, sac.checkString("ANAKONDA", 'A'));
 		assertEquals("error in lowercase String and lowercase char", 3, sac.checkString("anakonda", 'a'));
