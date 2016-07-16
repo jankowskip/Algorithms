@@ -29,6 +29,10 @@ Task: https://codility.com/programmers/task/perm_check/
 Task: https://codility.com/programmers/task/missing_integer/
 ##### MaxCounters
 Task: https://codility.com/programmers/task/max_counters/
+##### PassingCars
+Task: https://codility.com/programmers/task/passing_cars/
+##### CountDiv
+Task: https://codility.com/programmers/task/count_div/
 
 ## algorithms.sort
 #####BubbleSort
