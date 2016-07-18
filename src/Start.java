@@ -4,6 +4,7 @@ import java.util.List;
 
 import algorithms.basic.Fibonacci;
 import algorithms.codility.MaxCounters;
+import algorithms.codility.MinAvgTwoSlice;
 import algorithms.sort.BubbleSort;
 import algorithms.sort.InsertionSort;
 import algorithms.sort.MergeSort;
@@ -29,6 +30,5 @@ public class Start {
 		sortList.addAll(Arrays.asList(bubbleSort, insertionSort, selectionSort, shellSort, mergeSort, quickSort));
 		SortTester sortTester = new SortTester();
 		sortTester.executeSortAndPrint(sortList, 60);
-
 	}
 }
