@@ -33,6 +33,8 @@ Task: https://codility.com/programmers/task/max_counters/
 Task: https://codility.com/programmers/task/passing_cars/
 ##### CountDiv
 Task: https://codility.com/programmers/task/count_div/
+##### MinAvgTwoSlice
+Task: https://codility.com/programmers/task/min_avg_two_slice/
 
 ## algorithms.sort
 #####BubbleSort
